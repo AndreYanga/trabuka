@@ -1,11 +1,26 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hero',
   standalone: false,
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.css'
+  styleUrls: ['./hero.component.css']
 })
 export class HeroComponent {
+  constructor(private router: Router) {}
 
+  // Handle "Quero Estagiar" button click
+  onApplyForInternship(): void {
+    // Example: Navigate to an internship application page
+    this.router.navigate(['/apply-internship']);
+    // Alternatively, add logic for opening a modal or triggering an action
+  }
+
+  // Handle "Procurar Estagiários" button click
+  onSearchInterns(): void {
+    // Example: Navigate to a search interns page
+    this.router.navigate(['/search-interns']);
+    // Alternatively, add logic for filtering or searching interns
+  }
 }

@@ -54,10 +54,12 @@
 .login-logo {
   margin-bottom: 30px;
   text-align: center;
+
 }
 
 .login-logo img {
   max-width: 160px;
+    cursor: pointer;
 }
 
 /* Títulos */
@@ -191,6 +193,7 @@
   margin-top: 30px;
   font-size: 15px;
   text-align: center;
+    cursor: pointer;
 }
 
 .signup-link a {

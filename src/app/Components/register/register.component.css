@@ -58,6 +58,7 @@
 
 .cadastro-logo img {
   max-width: 160px;
+  cursor: pointer;
 }
 
 /* Títulos */
@@ -161,6 +162,7 @@
   margin-top: 30px;
   font-size: 15px;
   text-align: center;
+  cursor: pointer;
 }
 
 .login-link a {
@@ -204,4 +206,4 @@
   .cadastro-box h2 {
     font-size: 28px;
   }
-} 
+}

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 import { SiteRoutingModule } from './site-routing.module';
 import { SiteComponent } from './site.component';
@@ -31,11 +32,13 @@ import { FooterComponent } from './footer/footer.component';
     VagasComponent,
     BeneficiosComponent,
     FaqComponent,
-    FooterComponent
+    FooterComponent,
+    
   ],
   imports: [
     CommonModule,
-    SiteRoutingModule
+    SiteRoutingModule,
+    FormsModule, // Add FormsModule for ngModel
   ]
 })
 export class SiteModule { }

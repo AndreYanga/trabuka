@@ -9,10 +9,12 @@ import { LayoutModule } from './Components/layout/layout.module';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({ declarations: [
         AppComponent,
         LoginComponent,
-        RegisterComponent
+        RegisterComponent,
+
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
         FormsModule,
