@@ -10,22 +10,26 @@
     <nav id="navbar" class="navbar" [class.navbar-mobile]="isMobileNavOpen">
       <ul>
         <li><a class="nav-link scrollto" (click)="closeMobileNav()">Início</a></li>
+        <li>
+          <a ><span>Para Empresas</span></a>
+        </li>
         <li class="dropdown">
-          <a (click)="toggleDropdown('estudantes ', $event)"><span>Estudantes e Profissionais</span> <i class="bi bi-chevron-down"></i></a>
+          <a (click)="toggleDropdown('estudantes ', $event)"><span>Estudantes e Profissionais </span> <i class="bi bi-chevron-down"></i></a>
           <ul [ngClass]="{'dropdown-active': activeDropdown === 'estudantes'}">
-            <li><a (click)="closeMobileNav()" (click)=" goToEncontrarEstagio()">Encontrar Estágios</a></li>
             <li><a (click)="closeMobileNav()">Benefícios de Participar</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a (click)="toggleDropdown('empresas', $event)"><span>Para Empresas </span> <i class="bi bi-chevron-down"></i></a>
+            <li><a (click)="closeMobileNav()" (click)=" goToEncontrarEstagio()">Encontrar Estágios</a></li>
 
-          <ul [ngClass]="{'dropdown-active': activeDropdown === 'empresas'}">
-            <li><a (click)="closeMobileNav()">Publicar Projeto</a></li>
-            <li><a (click)="closeMobileNav()">Encontrar Estagiários</a></li>
           </ul>
         </li>
-        <li><a class="nav-link scrollto" (click)="closeMobileNav()">Como Funciona</a></li>
+
+         <li class="dropdown">
+          <a ><span>Sobre </span> <i class="bi bi-chevron-down"></i></a>
+
+          <ul [ngClass]="{'dropdown-active': activeDropdown === 'sobre'}">
+            <li><a (click)="closeMobileNav()">Sobre a Trabuka</a></li>
+            <li><a (click)="closeMobileNav()">Blogue</a></li>
+          </ul>
+        </li>
         <!-- Botões Entrar e Inscrever-se no menu mobile -->
         <li class="mobile-only"><a class="login-btn" (click)="goToLogin()">Entrar</a></li>
         <li class="mobile-only"><a class="get-started-btn" (click)="goToRegister()">Inscrever-se</a></li>

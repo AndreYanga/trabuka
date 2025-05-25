@@ -1,0 +1,48 @@
+<!-- Inclua o header compartilhado -->
+<app-header></app-header>
+
+<!-- ======= Blogue Header Section ======= -->
+<section id="blogue-header" class="header-bg">
+  <div class="overlay"></div>
+  <div class="header-content">
+    <h2 class="section-title">Blogue da Trabuka</h2>
+    <p class="section-subtitle">Explore artigos sobre tecnologia, design e desenvolvimento profissional em Angola.</p>
+  </div>
+</section>
+
+<!-- ======= Blogue Posts Section ======= -->
+<section id="blogue-posts" class="section-bg">
+  <div class="container">
+    <!-- Filtro de Categorias -->
+    <div class="categorias-filter">
+      <button *ngFor="let categoria of categorias"
+              [ngClass]="{'active': filtroCategoria === categoria}"
+              (click)="filtroCategoria = categoria">
+        {{ categoria }}
+      </button>
+    </div>
+
+    <!-- Lista de Posts -->
+    <div class="posts-list">
+      <div class="post-card" *ngFor="let post of filtrarPosts()" data-aos="fade-up">
+        <img [src]="post.imagem" alt="{{ post.titulo }}" class="post-imagem">
+        <div class="post-content">
+          <span class="post-categoria">{{ post.categoria }}</span>
+          <h3>{{ post.titulo }}</h3>
+          <p class="post-resumo">{{ post.resumo }}</p>
+          <div class="post-meta">
+            <span>Por {{ post.autor }} • {{ post.data }}</span>
+          </div>
+          <button class="read-more-btn" (click)="lerPost(post.id)">Ler Mais</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta">
+      <a routerLink="/register" class="get-started-btn">Junte-se à Trabuka</a>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

@@ -8,17 +8,30 @@ import { RegisterComponent } from './Components/register/register.component';
 import { LayoutModule } from './Components/layout/layout.module';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
+import { EncontrarEstagiosComponent } from './Components/encontrar-estagios/encontrar-estagios.component';
+import { SharedModule } from './shared/shared.module';
+import { EncontrarEstagiosModule } from './Components/encontrar-estagios/encontrar-estagios.module';
+import { BeneficiosParticiparComponent } from './Components/beneficios-participar/beneficios-participar.component';
+import { ParaEmpresasComponent } from './Components/para-empresas/para-empresas.component';
+import { SobreTrabukaComponent } from './Components/sobre-trabuka/sobre-trabuka.component';
+import { BlogueComponent } from './Components/blogue/blogue.component';
 
 @NgModule({ declarations: [
         AppComponent,
         LoginComponent,
         RegisterComponent,
+        EncontrarEstagiosComponent,
+        BeneficiosParticiparComponent,
+        ParaEmpresasComponent,
+        SobreTrabukaComponent,
+        BlogueComponent,
 
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
         FormsModule,
         AppRoutingModule,
         RouterModule,
-        LayoutModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        SharedModule,
+        LayoutModule,
+        EncontrarEstagiosModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }

@@ -1,0 +1,154 @@
+/* Benefícios de Participar Header */
+.header-bg {
+  background-image: url('../../../assets/img/hero2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 20px 80px; /* Reduced padding for mobile */
+  position: relative;
+  color: #ffffff;
+  border-radius: 20px;
+  margin: 20px auto; /* Centered with auto margins */
+  overflow: hidden;
+  width: 90%; /* Slightly wider on mobile */
+  max-width: 1200px; /* Max width for larger screens */
+  margin-top: 40px; /* Reduced top margin for mobile */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(23, 73, 93, 0.6); /* Escurecimento com cor #17495d */
+  z-index: 1;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.header-content .section-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 48px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-content .section-subtitle {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Benefícios de Participar Benefits */
+.section-bg {
+  background: #f8f9fa;
+  padding: 60px 0;
+}
+
+.section-title {
+  font-family: "Raleway", sans-serif;
+  color: #17495d;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.beneficios-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.beneficio-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.beneficio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.beneficio-card i {
+  font-size: 40px;
+  color: #b4872d;
+  margin-bottom: 15px;
+}
+
+.beneficio-card h3 {
+  font-family: "Raleway", sans-serif;
+  color: #17495d;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.beneficio-card p {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Call to Action */
+.cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.get-started-btn {
+  color: #ffffff;
+  background: #b4872d;
+  border-radius: 25px;
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.get-started-btn:hover {
+  background: #17495d;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header-bg {
+    height: 300px;
+  }
+
+  .header-content .section-title {
+    font-size: 36px;
+  }
+
+  .header-content .section-subtitle {
+    font-size: 16px;
+  }
+
+  .beneficios-list {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,32 @@
+<!-- Inclua o header compartilhado -->
+<app-header></app-header>
+
+<!-- ======= Benefícios de Participar Header Section ======= -->
+<section id="beneficios-participar-header" class="header-bg">
+  <div class="overlay"></div>
+  <div class="header-content">
+    <h2 class="section-title">Benefícios de Participar</h2>
+    <p class="section-subtitle">Descubra como a Trabuka pode transformar sua carreira em tecnologia e design em Angola.</p>
+  </div>
+</section>
+
+<!-- ======= Benefícios de Participar Benefits Section ======= -->
+<section id="beneficios-participar-benefits" class="section-bg">
+  <div class="container">
+    <!-- Lista de Benefícios -->
+    <div class="beneficios-list">
+      <div class="beneficio-card" *ngFor="let beneficio of beneficios">
+        <i [class]="beneficio.icone"></i>
+        <h3>{{ beneficio.titulo }}</h3>
+        <p>{{ beneficio.descricao }}</p>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta">
+      <a routerLink="/register" class="get-started-btn">Inscreva-se Agora</a>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

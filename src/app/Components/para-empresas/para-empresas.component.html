@@ -1,0 +1,58 @@
+<!-- Inclua o header compartilhado -->
+<app-header></app-header>
+
+<!-- ======= Para Empresas Header Section ======= -->
+<section id="empresas-servicos-header" class="header-bg">
+  <div class="overlay"></div>
+  <div class="header-content">
+    <h2 class="section-title">Para Empresas</h2>
+    <p class="section-subtitle">Conecte-se a talentos em tecnologia e design para transformar sua empresa em Angola.</p>
+  </div>
+</section>
+
+<!-- ======= Para Empresas Content Section ======= -->
+<section id="empresas-servicos-content" class="section-bg">
+  <div class="container">
+    <!-- Benefícios -->
+    <div class="beneficios-section">
+      <h3 class="section-subtitle">Benefícios de Publicar Projetos e Contratar</h3>
+      <div class="beneficios-list">
+        <div class="beneficio-card" *ngFor="let beneficio of beneficios">
+          <i [class]="beneficio.icone"></i>
+          <h4>{{ beneficio.titulo }}</h4>
+          <p>{{ beneficio.descricao }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Como Funciona -->
+    <div class="como-funciona-section">
+      <h3 class="section-subtitle">Como Funciona?</h3>
+      <div class="etapas-list">
+        <div class="etapa-card" *ngFor="let etapa of etapas">
+          <div class="etapa-numero">Etapa {{ etapa.numero }}</div>
+          <h4>{{ etapa.titulo }}</h4>
+          <p>{{ etapa.descricao }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contratações Temporárias -->
+    <div class="contratacoes-section">
+      <h3 class="section-subtitle">Contratações Temporárias</h3>
+      <p>Contrate estagiários e profissionais para projetos específicos de curta duração (5–30 dias). Na Trabuka:</p>
+      <ul>
+        <li><strong>Duração Flexível:</strong> Projetos podem durar de 5 a 30 dias, dependendo do nível e complexidade.</li>
+        <li><strong>Remuneração Justa:</strong> O estagiário recebe 70–80% do valor do projeto (níveis 3–4), pago via Multicaixa. A Trabuka retém 20–30% como taxa.</li>
+        <li><strong>Supervisão Garantida:</strong> Projetos podem ser supervisionados por mentores (nível Mestre), assegurando entregas de qualidade.</li>
+      </ul>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta">
+      <a routerLink="/register" class="get-started-btn">Cadastre Sua Empresa</a>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

@@ -1,0 +1,43 @@
+<!-- Inclua o header compartilhado -->
+<app-header></app-header>
+
+<!-- ======= Encontrar Estágios Header Section ======= -->
+<section id="encontrar-estagios-header" class="header-bg">
+  <div class="overlay"></div>
+  <div class="header-content">
+    <h2 class="section-title">Encontrar Estágios</h2>
+    <p class="section-subtitle">Descubra oportunidades de estágio em tecnologia e design para impulsionar sua carreira em Angola.</p>
+  </div>
+</section>
+
+<!-- ======= Encontrar Estágios Projects Section ======= -->
+<section id="encontrar-estagios-projects" class="section-bg">
+  <div class="container">
+    <!-- Filtros -->
+    <div class="filters">
+      <select [(ngModel)]="filtroNivel" (change)="filtrarProjetos()" class="form-select">
+        <option value="">Todos os Níveis</option>
+        <option value="Praticante">Praticante</option>
+        <option value="Construtor">Construtor</option>
+        <option value="Mestre">Mestre</option>
+      </select>
+      <input type="text" [(ngModel)]="filtroArea" (input)="filtrarProjetos()" placeholder="Filtrar por área ou empresa" class="form-control">
+    </div>
+
+    <!-- Lista de Projetos -->
+    <div class="projetos-list">
+      <div class="projeto-card" *ngFor="let projeto of filtrarProjetos()">
+        <h3>{{ projeto.titulo }}</h3>
+        <p><strong>Empresa:</strong> {{ projeto.empresa }}</p>
+        <p><strong>Nível:</strong> {{ projeto.nivel }}</p>
+        <p><strong>Prazo:</strong> {{ projeto.prazo }}</p>
+        <p><strong>Recompensa:</strong> {{ projeto.recompensa }}</p>
+        <p><strong>Status:</strong> <span [ngClass]="{'text-success': projeto.status === 'concluído', 'text-warning': projeto.status === 'ativo', 'text-danger': projeto.status === 'pendente'}">{{ projeto.status }}</span></p>
+        <button class="get-started-btn" (click)="candidatar(projeto.id)" [disabled]="projeto.status === 'concluído'">Candidatar-se</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<app-footer></app-footer>

@@ -1,0 +1,215 @@
+/* Blogue Header */
+.header-bg {
+  background-image: url('../../../assets/img/hero2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 20px 80px; /* Reduced padding for mobile */
+  position: relative;
+  color: #ffffff;
+  border-radius: 20px;
+  margin: 20px auto; /* Centered with auto margins */
+  overflow: hidden;
+  width: 90%; /* Slightly wider on mobile */
+  max-width: 1200px; /* Max width for larger screens */
+  margin-top: 40px; /* Reduced top margin for mobile */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(23, 73, 93, 0.6); /* Escurecimento com cor #17495d */
+  z-index: 1;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.header-content .section-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 48px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-content .section-subtitle {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Blogue Posts */
+.section-bg {
+  background: #f8f9fa;
+  padding: 60px 0;
+}
+
+.section-title {
+  font-family: "Raleway", sans-serif;
+  color: #17495d;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Filtro de Categorias */
+.categorias-filter {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.categorias-filter button {
+  background: #fff;
+  border: 1px solid #17495d;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-family: "Open Sans", sans-serif;
+  color: #17495d;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.categorias-filter button.active,
+.categorias-filter button:hover {
+  background: #b4872d;
+  color: #fff;
+  border-color: #b4872d;
+}
+
+/* Lista de Posts */
+.posts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.post-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-10px);
+}
+
+.post-imagem {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 20px;
+}
+
+.post-categoria {
+  display: inline-block;
+  background: #b4872d;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.post-content h3 {
+  font-family: "Raleway", sans-serif;
+  color: #17495d;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.post-resumo {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.post-meta {
+  font-family: "Open Sans", sans-serif;
+  color: #777777;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.read-more-btn {
+  background: #b4872d;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background: #17495d;
+}
+
+/* Call to Action */
+.cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.get-started-btn {
+  color: #ffffff;
+  background: #b4872d;
+  border-radius: 25px;
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.get-started-btn:hover {
+  background: #17495d;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header-bg {
+    height: 300px;
+  }
+
+  .header-content .section-title {
+    font-size: 36px;
+  }
+
+  .header-content .section-subtitle {
+    font-size: 16px;
+  }
+
+  .posts-list {
+    grid-template-columns: 1fr;
+  }
+
+  .categorias-filter {
+    flex-wrap: wrap;
+  }
+}

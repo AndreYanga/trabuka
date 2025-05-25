@@ -1,0 +1,71 @@
+<!-- Inclua o header compartilhado -->
+<app-header></app-header>
+
+<!-- ======= Sobre a Trabuka Section ======= -->
+<section id="sobre-trabuka" class="sobre-trabuka">
+  <!-- Hero com Imagem de Fundo -->
+  <div class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-center" data-aos="zoom-in" data-aos-delay="100">
+      <h1 class="hero-title">Sobre a Trabuka</h1>
+      <p class="hero-lead">Conheça a nossa história, missão e valores que impulsionam o futuro digital em Angola.</p>
+    </div>
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <div class="container" data-aos="fade-up">
+    <!-- Quem Somos -->
+    <div class="sobre-section" data-aos="fade-up" data-aos-delay="150">
+      <h3 class="section-subtitle">Quem Somos</h3>
+      <p class="section-text">{{ quemSomos }}</p>
+    </div>
+
+    <!-- Missão, Visão, Proposta -->
+    <div class="missoes-section" data-aos="fade-up" data-aos-delay="200">
+      <div class="missao-card">
+        <i class="bi bi-flag-fill"></i>
+        <h3 class="section-subtitle">Nossa Missão</h3>
+        <p class="section-text">{{ missao }}</p>
+      </div>
+      <div class="missao-card">
+        <i class="bi bi-eye-fill"></i>
+        <h3 class="section-subtitle">Nossa Visão</h3>
+        <p class="section-text">{{ visao }}</p>
+      </div>
+      <div class="missao-card">
+        <i class="bi bi-lightbulb-fill"></i>
+        <h3 class="section-subtitle">Nossa Proposta</h3>
+        <p class="section-text">{{ proposta }}</p>
+      </div>
+    </div>
+
+    <!-- Valores -->
+    <div class="valores-section" data-aos="fade-up" data-aos-delay="250">
+      <h3 class="section-subtitle">Valores</h3>
+      <div class="valores-list">
+        <div class="valor-card" *ngFor="let valor of valores" data-aos="zoom-in" data-aos-delay="100">
+          <span>{{ valor }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sistema de Valores -->
+    <div class="sistema-valores-section" data-aos="fade-up" data-aos-delay="300">
+      <h3 class="section-subtitle">Nosso Sistema de Valores</h3>
+      <p class="section-text">Os nossos valores orientam tudo o que fazemos, desde a tecnologia que usamos até as pessoas que conectamos.</p>
+      <div class="sistema-valores-list">
+        <div class="sistema-valor-card" *ngFor="let valor of sistemaValores" data-aos="fade-up" data-aos-delay="150">
+          <h4>{{ valor.titulo }}</h4>
+          <p class="section-text">{{ valor.descricao }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta text-center" data-aos="zoom-in" data-aos-delay="350">
+      <a class="btn btn-primary btn-lg" [routerLink]="['/cadastro']" [attr.aria-label]="'Junte-se a nós'">Junte-se a Nós</a>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>
