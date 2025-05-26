@@ -32,6 +32,27 @@ export class HeaderComponent {
     this.router.navigate(['/']);
     this.closeMobileNav();
   }
+  goToEmpresas() {
+    this.router.navigate(['/empresas']);
+    this.closeMobileNav();
+  }
+
+  goToBeneficios() {
+    this.router.navigate(['/beneficios-participar']);
+    this.closeMobileNav();
+  }
+
+ 
+
+  goToSobreTrabuka() {
+    this.router.navigate(['/sobre-trabuka']);
+    this.closeMobileNav();
+  }
+
+  goToBlogue() {
+    this.router.navigate(['/blogue']);
+    this.closeMobileNav();
+  }
 
   toggleMobileNav() {
     this.isMobileNavOpen = !this.isMobileNavOpen;

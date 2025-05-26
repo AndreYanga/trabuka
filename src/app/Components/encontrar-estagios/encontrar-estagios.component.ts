@@ -10,7 +10,8 @@ export class EncontrarEstagiosComponent {
   projetos = [
     { id: 1, titulo: 'Desenvolvimento de Landing Page', empresa: 'TechStart', nivel: 'Praticante', prazo: '10/06/2025', recompensa: '5000 AKZ', status: 'pendente' },
     { id: 2, titulo: 'App Móvel para Gestão', empresa: 'InnoDesign', nivel: 'Construtor', prazo: '15/06/2025', recompensa: '15000 AKZ', status: 'ativo' },
-    { id: 3, titulo: 'Design UI/UX para E-commerce', empresa: 'CreativeHub', nivel: 'Mestre', prazo: '20/06/2025', recompensa: '25000 AKZ', status: 'concluído' }
+    { id: 3, titulo: 'App Móvel para Gestão', empresa: 'InnoDesign', nivel: 'Construtor', prazo: '15/06/2025', recompensa: '15000 AKZ', status: 'ativo' },
+    { id: 4, titulo: 'Design UI/UX para E-commerce', empresa: 'CreativeHub', nivel: 'Mestre', prazo: '20/06/2025', recompensa: '25000 AKZ', status: 'concluído' },
   ];
 
   filtroNivel: string = '';

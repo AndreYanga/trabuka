@@ -10,14 +10,9 @@ export class ParaEmpresasComponent {
 
   beneficios = [
     {
-      icone: 'bx bx-gift',
-      titulo: 'Teste 100% Gratuito',
-      descricao: 'Cadastre sua empresa e publique até 5 vagas sem custo por 30 dias. Encontre o talento que você precisa!'
-    },
-    {
       icone: 'bx bx-filter-alt',
       titulo: 'Apenas Candidatos Alinhados',
-      descricao: 'Nosso algoritmo garante que apenas estagiários e profissionais compatíveis com os requisitos do projeto se candidatem.'
+      descricao: 'A Trabuka garante que apenas estagiários e profissionais compatíveis com os requisitos do projeto se candidatem.'
     },
     {
       icone: 'bx bx-time-five',
@@ -49,9 +44,8 @@ export class ParaEmpresasComponent {
   etapas = [
     { numero: 1, titulo: 'Criação da Oportunidade', descricao: 'Crie novas oportunidades ou projetos em nossa plataforma.' },
     { numero: 2, titulo: 'Revisão', descricao: 'A oportunidade passa por uma revisão da nossa equipe. Verificamos a coerência com o mercado e padrões da Trabuka. Tempo: 1 dia.' },
-    { numero: 3, titulo: 'Cálculo do Matching', descricao: 'Nosso algoritmo cruza os requisitos com os candidatos da base, identificando os mais compatíveis.' },
-    { numero: 4, titulo: 'Promoção da Oportunidade', descricao: 'Notificamos os candidatos compatíveis e publicamos a vaga em sites parceiros para maior alcance.' },
+    { numero: 3, titulo: 'Candidatos', descricao: 'A Trabuka cruza os requisitos com os candidatos da base, identificando os mais compatíveis.' },
+    { numero: 4, titulo: 'Promoção da Oportunidade', descricao: 'Notificamos os candidatos compatíveis.' },
     { numero: 5, titulo: 'Receba Candidatos', descricao: 'Receba os primeiros candidatos em menos de 2 dias.' },
-    { numero: 6, titulo: 'Controle o Processo Seletivo', descricao: 'Organize os aplicantes por taxa de matching, use o fluxo de candidatos, contate diretamente e contrate!' }
   ];
 }

@@ -1,17 +1,16 @@
 /* Encontrar Estágios Header */
 .header-bg {
-  background-image: url('../../../assets/img/hero2.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/estagio2.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
-  padding: 100px 20px 80px; /* Reduced padding for mobile */
+  background-position: center;
+  padding: 80px 20px;
   position: relative;
   color: #ffffff;
   border-radius: 20px;
-  margin: 20px auto; /* Centered with auto margins */
-  overflow: hidden;
-  width: 90%; /* Slightly wider on mobile */
-  max-width: 1200px; /* Max width for larger screens */
-  margin-top: 40px; /* Reduced top margin for mobile */
+  margin: 30px auto;
+  width: 90%;
+  max-width: 1400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .overlay {
@@ -20,27 +19,37 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(23, 73, 93, 0.6); /* Escurecimento com cor #17495d */
+  background: linear-gradient(135deg, rgba(23, 73, 93, 0.7), rgba(180, 135, 45, 0.3));
   z-index: 1;
 }
 
 .header-content {
   position: relative;
   z-index: 2;
-  color: #fff;
+  text-align: center;
 }
 
 .header-content .section-title {
   font-family: "Raleway", sans-serif;
-  font-size: 48px;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff;
+
 }
 
 .header-content .section-subtitle {
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  font-size: 22px;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.header-illustration {
+  max-width: 300px;
+  margin-top: 20px;
+  animation: float 3s ease-in-out infinite;
 }
 
 /* Encontrar Estágios Projects */

@@ -4,11 +4,12 @@
   background: linear-gradient(135deg, #f8f9fa 0%, #e3e7eb 100%);
   position: relative;
   overflow: hidden;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* Hero Section com Imagem de Fundo */
 .hero-section {
-  background-image: url('../../../assets/img/hero2.jpg');
+  background-image: url('../../../assets/img/about.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   padding: 100px 20px 80px; /* Reduced padding for mobile */
@@ -42,7 +43,7 @@
 }
 
 .hero-title {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 48px;
   font-weight: 700;
   text-transform: uppercase;
@@ -52,12 +53,13 @@
 }
 
 .hero-lead {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 20px;
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
 }
 
 /* Background Decorativo (mantido para o conteúdo abaixo do hero) */
@@ -84,12 +86,23 @@
   position: relative;
 }
 
-.section-text {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+.sobre-section .section-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
   color: #6B7280;
   line-height: 1.8;
+  margin-left: 10%;
+  margin-right: 10%;
   text-align: center;
+
+}
+
+.section-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #6B7280;
+  line-height: 1.8;
+
 }
 
 .sobre-section, .missoes-section, .valores-section, .sistema-valores-section {
