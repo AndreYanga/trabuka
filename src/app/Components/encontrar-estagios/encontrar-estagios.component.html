@@ -31,7 +31,6 @@
         <p><strong>Empresa:</strong> {{ projeto.empresa }}</p>
         <p><strong>Nível:</strong> {{ projeto.nivel }}</p>
         <p><strong>Prazo:</strong> {{ projeto.prazo }}</p>
-        <p><strong>Recompensa:</strong> {{ projeto.recompensa }}</p>
         <p><strong>Status:</strong> <span [ngClass]="{'text-success': projeto.status === 'concluído', 'text-warning': projeto.status === 'ativo', 'text-danger': projeto.status === 'pendente'}">{{ projeto.status }}</span></p>
         <button class="get-started-btn" (click)="candidatar(projeto.id)" [disabled]="projeto.status === 'concluído'">Candidatar-se</button>
       </div>

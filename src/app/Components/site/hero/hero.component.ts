@@ -10,6 +10,9 @@ import { Router } from '@angular/router';
 export class HeroComponent {
   constructor(private router: Router) {}
 
+  isMobileNavOpen = false;
+  activeDropdown: string | null = null;
+
   // Handle "Quero Estagiar" button click
   onApplyForInternship(): void {
     // Example: Navigate to an internship application page
@@ -23,4 +26,20 @@ export class HeroComponent {
     this.router.navigate(['/search-interns']);
     // Alternatively, add logic for filtering or searching interns
   }
+
+  goToEmpresas() {
+    this.router.navigate(['/empresas']);
+    this.closeMobileNav();
+  }
+
+  goToEncontrarEstagio(){
+    this.router.navigate(['/encontrar-estagios']);
+    this.closeMobileNav();
+  }
+
+  closeMobileNav() {
+    this.isMobileNavOpen = false;
+    this.activeDropdown = null;
+  }
+
 }

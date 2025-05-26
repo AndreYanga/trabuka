@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-para-estudantes',
@@ -8,4 +9,18 @@ import { Component } from '@angular/core';
 })
 export class ParaEstudantesComponent {
 
+constructor(private router: Router) {}
+
+  isMobileNavOpen = false;
+  activeDropdown: string | null = null;
+
+  goToEncontrarEstagio(){
+    this.router.navigate(['/encontrar-estagios']);
+    this.closeMobileNav();
+  }
+
+  closeMobileNav() {
+    this.isMobileNavOpen = false;
+    this.activeDropdown = null;
+  }
 }
