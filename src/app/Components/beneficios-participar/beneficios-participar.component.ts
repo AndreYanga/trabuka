@@ -50,4 +50,9 @@ export class BeneficiosParticiparComponent {
       descricao: 'Seu perfil é destacado para empresas, aumentando suas chances de contratação direta.'
     }
   ];
+
+   ngOnInit() {
+    // Rola a página para o topo ao carregar o componente
+    window.scrollTo(0, 0);
+  }
 }

@@ -41,4 +41,10 @@ export class SobreTrabukaComponent {
       descricao: 'Praticando uma atitude resiliente e incentivando um ambiente de trabalho positivo na Trabuka.'
     }
   ];
+
+
+   ngOnInit(){
+    // Rola a página para o topo ao carregar o componente
+    window.scrollTo(0, 0);
+  }
 }

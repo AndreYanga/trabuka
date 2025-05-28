@@ -8,6 +8,9 @@ import { Router } from '@angular/router';
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
+  role: string | null = null; // 'cliente' ou 'freelancer'
+  isFormVisible: boolean = false;
+
   constructor(private router: Router) {}
 
   goToHome() {
@@ -16,5 +19,15 @@ export class RegisterComponent {
 
   goTologin() {
     this.router.navigate(['/login']);
+  }
+
+  selectRole(role: string) {
+    this.role = role;
+  }
+
+  showForm() {
+    if (this.role) {
+      this.isFormVisible = true;
+    }
   }
 }

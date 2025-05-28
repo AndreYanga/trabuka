@@ -15,6 +15,7 @@ import { BeneficiosParticiparComponent } from './Components/beneficios-participa
 import { ParaEmpresasComponent } from './Components/para-empresas/para-empresas.component';
 import { SobreTrabukaComponent } from './Components/sobre-trabuka/sobre-trabuka.component';
 import { BlogueComponent } from './Components/blogue/blogue.component';
+import { HomeComponent } from './Components/home/home.component';
 
 @NgModule({ declarations: [
         AppComponent,
@@ -25,6 +26,7 @@ import { BlogueComponent } from './Components/blogue/blogue.component';
         ParaEmpresasComponent,
         SobreTrabukaComponent,
         BlogueComponent,
+        HomeComponent,
 
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,

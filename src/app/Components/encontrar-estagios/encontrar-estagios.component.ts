@@ -29,4 +29,9 @@ export class EncontrarEstagiosComponent {
     alert(`Candidatura enviada para o projeto ID ${projetoId}!`);
     // Lógica para enviar candidatura (ex.: chamar serviço API)
   }
+
+   ngOnInit() {
+    // Rola a página para o topo ao carregar o componente
+    window.scrollTo(0, 0);
+  }
  }

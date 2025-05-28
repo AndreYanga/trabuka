@@ -27,8 +27,8 @@ export class HeroComponent {
     // Alternatively, add logic for filtering or searching interns
   }
 
-  goToEmpresas() {
-    this.router.navigate(['/empresas']);
+  goToLogin() {
+    this.router.navigate(['/login']);
     this.closeMobileNav();
   }
 

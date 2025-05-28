@@ -49,6 +49,7 @@
   justify-content: center;
   gap: 15px; /* Reduced gap for mobile */
   flex-wrap: wrap;
+
 }
 
 .hero-buttons .btn {
@@ -58,6 +59,9 @@
   border-radius: 25px;
   min-height: 44px; /* Minimum touch target size */
   line-height: 1.5; /* Improved text alignment */
+  background-color: #b4872d;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .timing-buttons .btn {

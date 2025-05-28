@@ -52,4 +52,9 @@ export class BlogueComponent {
     // Placeholder para navegação para o post completo
     alert(`Abrir post com ID ${postId}`);
   }
+
+   ngOnInit() {
+    // Rola a página para o topo ao carregar o componente
+    window.scrollTo(0, 0);
+  }
 }

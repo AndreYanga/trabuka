@@ -8,6 +8,7 @@ import { BeneficiosParticiparComponent } from './Components/beneficios-participa
 import { ParaEmpresasComponent } from './Components/para-empresas/para-empresas.component';
 import { SobreTrabukaComponent } from './Components/sobre-trabuka/sobre-trabuka.component';
 import { BlogueComponent } from './Components/blogue/blogue.component';
+import { HomeComponent } from './Components/home/home.component';
 
 const routes: Routes = [
   {path:'', component:SiteComponent, pathMatch:"full"},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'encontrar-estagios', component: EncontrarEstagiosComponent, pathMatch:"full" },
   {path: 'beneficios-participar', component: BeneficiosParticiparComponent, pathMatch:"full" },
   {path: 'sobre-trabuka', component: SobreTrabukaComponent, pathMatch:"full" },
+  {path: 'home', component: HomeComponent, pathMatch:"full" },
   {path: 'blogue', component: BlogueComponent, pathMatch:"full" },
   {path: 'empresas', component: ParaEmpresasComponent, pathMatch:"full" },
 

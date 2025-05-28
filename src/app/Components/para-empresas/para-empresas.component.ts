@@ -48,4 +48,10 @@ export class ParaEmpresasComponent {
     { numero: 4, titulo: 'Promoção da Oportunidade', descricao: 'Notificamos os candidatos compatíveis.' },
     { numero: 5, titulo: 'Receba Candidatos', descricao: 'Receba os primeiros candidatos em menos de 2 dias.' },
   ];
+
+
+  ngOnInit() {
+    // Rola a página para o topo ao carregar o componente
+    window.scrollTo(0, 0);
+  }
 }

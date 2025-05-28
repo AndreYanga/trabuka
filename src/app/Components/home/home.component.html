@@ -1,0 +1,96 @@
+<!-- Inclua o header compartilhado -->
+
+<!-- ======= Main Content Section ======= -->
+<main id="main" class="main-content">
+  <section class="welcome-section">
+    <div class="container">
+      <h1 class="welcome-title">Bem-vindo, [Nome do Usuário]!</h1>
+      <p class="welcome-subtitle">Explore oportunidades, aprenda e conecte-se com a comunidade.</p>
+      <div class="welcome-buttons">
+        <button class="btn-explore" routerLink="/vagas">Explorar Vagas</button>
+        <button class="btn-learn" routerLink="/cursos">Iniciar Cursos</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Perguntas e Respostas -->
+  <section class="qa-section">
+    <div class="container">
+      <h2 class="section-title">Perguntas e Respostas</h2>
+      <p class="section-subtitle">Partilhe dúvidas e ajude a comunidade como no Stack Overflow.</p>
+      <div class="qa-container">
+        <div class="qa-form">
+          <input type="text" placeholder="Digite sua dúvida..." class="qa-input">
+          <button class="btn-post" (click)="postQuestion()">Publicar Dúvida</button>
+        </div>
+        <div class="qa-list" *ngFor="let qa of questions">
+          <div class="qa-item">
+            <h4>{{ qa.question }}</h4>
+            <p *ngFor="let answer of qa.answers">{{ answer }}</p>
+            <textarea placeholder="Responda aqui..." class="qa-answer-input" (keyup.enter)="addAnswer(qa)"></textarea>
+            <button class="btn-answer" (click)="addAnswer(qa)">Enviar Resposta</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vagas -->
+  <section class="jobs-section">
+    <div class="container">
+      <h2 class="section-title">Vagas Disponíveis</h2>
+      <div class="jobs-list">
+        <div class="job-card" *ngFor="let job of jobs">
+          <h4>{{ job.title }}</h4>
+          <p>{{ job.description }}</p>
+          <button class="btn-apply" (click)="applyJob(job)">Candidatar-se</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cursos -->
+  <section class="courses-section">
+    <div class="container">
+      <h2 class="section-title">Cursos Recomendados</h2>
+      <div class="courses-list">
+        <div class="course-card" *ngFor="let course of courses">
+          <h4>{{ course.title }}</h4>
+          <p>{{ course.description }}</p>
+          <button class="btn-enroll" (click)="enrollCourse(course)">Inscrever-se</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extras (Notificações e Eventos) -->
+  <section class="extra-section">
+    <div class="container">
+      <h2 class="section-title">Mais para Você</h2>
+      <div class="extra-container">
+        <div class="notification-card">
+          <h4>Notificações</h4>
+          <p>Você tem 2 novas mensagens.</p>
+          <button class="btn-view">Ver Todas</button>
+        </div>
+        <div class="event-card">
+          <h4>Próximos Eventos</h4>
+          <p>Webinar: Design UI/UX - 30/05/2025</p>
+          <button class="btn-join">Participar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Modal de Perfil -->
+<div class="modal" [class.show]="isModalOpen" (click)="closeModal($event)">
+  <div class="modal-content" (click)="stopPropagation($event)">
+    <h3>Perfil de [Nome do Usuário]</h3>
+    <p>Email: [emailexample.com]</p>
+    <p>Membro desde: 28/05/2025</p>
+    <button class="btn-logout" (click)="logout()">Sair</button>
+  </div>
+</div>
+
+<app-footer></app-footer>
