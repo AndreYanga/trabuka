@@ -1,0 +1,183 @@
+/* General Section Styling */
+.section {
+  margin-bottom: 20px; /* Reduced from 40px to bring sections closer */
+  padding: 20px 0; /* Add padding for better content flow */
+}
+
+/* Section Title */
+.section-title {
+  font-size: 1.75rem; /* Slightly larger for better hierarchy */
+  font-weight: 700;
+  color: #17495d;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Add a subtle underline effect to section titles */
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #b4872d;
+  border-radius: 2px;
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  border-radius: 12px; /* Slightly larger radius for a modern look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff; /* Ensure consistent white background */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.card:hover {
+  transform: translateY(-8px); /* Slightly more lift on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Stronger shadow on hover */
+}
+
+.card-body {
+  padding: 20px; /* Consistent padding */
+}
+
+/* Card Title and Value */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #17495d;
+  margin-bottom: 0.75rem;
+}
+
+.card-value {
+  font-size: 1.75rem; /* Slightly smaller for balance */
+  font-weight: 700;
+  color: #b4872d;
+}
+
+/* Card Link */
+.card-link {
+  color: #b4872d;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card-link:hover {
+  color: #17495d;
+  text-decoration: underline;
+}
+
+/* Card Text */
+.card-text {
+  font-size: 0.95rem;
+  color: #6c757d;
+  margin: 12px 0;
+  line-height: 1.5;
+}
+
+/* Badges */
+.badge-praticante, .badge {
+  background: #17495d;
+  color: #ffffff;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 12px; /* Rounded badges */
+}
+
+.badge-praticante {
+  font-weight: 500;
+}
+
+/* Profile Image */
+.profile-img {
+  width: 140px; /* Slightly larger for prominence */
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid #b4872d;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #17495d;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #b4872d;
+  transform: translateY(-2px);
+}
+
+/* Progress Bar */
+.progress {
+  height: 8px; /* Thinner for a sleeker look */
+  border-radius: 4px;
+  background: #e9ecef;
+}
+
+.progress-bar {
+  background: #b4872d;
+  border-radius: 4px;
+}
+
+/* Footer */
+.footer-layout {
+  background: linear-gradient(135deg, #17495d, #2a6a84); /* Gradient for modern look */
+  color: #ffffff;
+  padding: 30px 20px;
+  margin-top: 30px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .section {
+    padding: 15px 0;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-value {
+    font-size: 1.5rem;
+  }
+
+  .btn-primary {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

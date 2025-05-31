@@ -1,0 +1,75 @@
+<aside class="sidebar" id="sidebar" [ngClass]="{'active': isSidebarActive}">
+  <div class="sidebar-header">
+    <div class="d-flex align-items-center justify-content-center">
+      <img src="../../../../assets/img/logo-trabuka.png" alt="Trabuka Logo" class="logo-img">
+    </div>
+    <p class="sidebar-subtitle">Painel do Estudante</p>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section">
+      <button class="nav-section-toggle" data-bs-toggle="collapse" data-bs-target="#perfil-collapse" aria-expanded="true">
+        <i class="bi bi-person-circle me-2"></i> Perfil & Portfólio
+        <i class="bi bi-chevron-down toggle-icon"></i>
+      </button>
+      <div class="collapse show" id="perfil-collapse">
+        <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">
+          <i class="bi bi-grid"></i> Dashboard
+        </a>
+        <a class="nav-link" routerLink="/meu-perfil" routerLinkActive="active">
+          <i class="bi bi-person"></i> Meu Perfil
+        </a>
+        <a class="nav-link" routerLink="/portfolio" routerLinkActive="active">
+          <i class="bi bi-collection"></i> Portfólio
+        </a>
+      </div>
+    </div>
+    <div class="nav-section">
+      <button class="nav-section-toggle" data-bs-toggle="collapse" data-bs-target="#oportunidades-collapse" aria-expanded="true">
+        <i class="bi bi-briefcase me-2"></i> Oportunidades
+        <i class="bi bi-chevron-down toggle-icon"></i>
+      </button>
+      <div class="collapse show" id="oportunidades-collapse">
+        <a class="nav-link" routerLink="/vagas" routerLinkActive="active">
+          <i class="bi bi-briefcase-fill"></i> Vagas
+        </a>
+        <a class="nav-link" routerLink="/projetos" routerLinkActive="active">
+          <i class="bi bi-lightbulb"></i> Meus Projetos
+        </a>
+      </div>
+    </div>
+    <div class="nav-section">
+      <button class="nav-section-toggle" data-bs-toggle="collapse" data-bs-target="#ferramentas-collapse" aria-expanded="true">
+        <i class="bi bi-tools me-2"></i> Ferramentas
+        <i class="bi bi-chevron-down toggle-icon"></i>
+      </button>
+      <div class="collapse show" id="ferramentas-collapse">
+        <a class="nav-link" routerLink="/testes-habilidades" routerLinkActive="active">
+          <i class="bi bi-graph-up"></i> Testes de Habilidades
+        </a>
+        <a class="nav-link" routerLink="/ganhos" routerLinkActive="active">
+          <i class="bi bi-wallet2"></i> Ganhos
+        </a>
+        <a class="nav-link" routerLink="/notificacoes" routerLinkActive="active">
+          <i class="bi bi-bell"></i> Notificações
+        </a>
+        <a class="nav-link" routerLink="/mensagens" routerLinkActive="active">
+          <i class="bi bi-chat"></i> Mensagens
+        </a>
+        <a class="nav-link" routerLink="/forum" routerLinkActive="active">
+          <i class="bi bi-chat-square-text"></i> Fórum
+        </a>
+        <a class="nav-link" routerLink="/configuracoes" routerLinkActive="active">
+          <i class="bi bi-gear"></i> Configurações
+        </a>
+      </div>
+    </div>
+    <div class="nav-section">
+      <a class="nav-link nav-link-logout" routerLink="/logout">
+        <i class="bi bi-box-arrow-left text-danger"></i> Sair
+      </a>
+    </div>
+  </nav>
+  <button class="sidebar-toggle d-lg-none" (click)="toggleSidebar()">
+    <i class="bi bi-list"></i>
+  </button>
+</aside>

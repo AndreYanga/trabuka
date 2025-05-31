@@ -7,7 +7,6 @@ const routes: Routes = [{
   component: SiteComponent,
   children: [
 
-
  ]
 }];
 

@@ -1,0 +1,148 @@
+.header-layout {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #17495d 0%, #b4872d 100%);
+  padding: 20px;
+  border-radius: 10px;
+  color: #ffffff;
+  margin-top: -80px;
+}
+
+.header-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.header-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.search-bar {
+  position: relative;
+  width: 350px;
+}
+
+.search-bar input {
+  padding-left: 40px;
+  border-radius: 20px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+}
+
+.btn-icon {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.btn-icon .badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 0.6rem;
+  padding: 3px 6px;
+  border-radius: 50%;
+}
+
+.user-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #b4872d;
+  object-fit: cover;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #17495d;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #17495d;
+}
+
+.card-value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.card-link {
+  color: #b4872d;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin: 10px 0;
+}
+
+.badge-praticante {
+  background: #17495d;
+  color: #ffffff;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #b4872d;
+  object-fit: cover;
+}
+
+.btn-primary {
+  background: #17495d;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #b4872d;
+}
+
+/* Estilização do Tooltip */
+.tooltip-inner {
+  background-color: #17495d;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+}
+
+.tooltip .tooltip-arrow::before {
+  border-top-color: #17495d; /* Para tooltips acima */
+  border-bottom-color: #17495d; /* Para tooltips abaixo */
+}

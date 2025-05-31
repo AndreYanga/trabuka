@@ -10,6 +10,9 @@ import { SobreTrabukaComponent } from './Components/sobre-trabuka/sobre-trabuka.
 import { BlogueComponent } from './Components/blogue/blogue.component';
 import { HomeComponent } from './Components/home/home.component';
 
+
+
+
 const routes: Routes = [
   {path:'', component:SiteComponent, pathMatch:"full"},
   {path:'site', loadChildren:() => import("./Components/site/site.module").then(m => m.SiteModule)},
@@ -21,10 +24,12 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent, pathMatch:"full" },
   {path: 'blogue', component: BlogueComponent, pathMatch:"full" },
   {path: 'empresas', component: ParaEmpresasComponent, pathMatch:"full" },
+  {path:'page', loadChildren:() => import("./Components/page/page.module").then(m => m.PageModule)},
 
-  {path:'layout', loadChildren:() => import("./Components/layout/layout.module").then(m => m.LayoutModule)},
   {path:'**', redirectTo:'site',pathMatch:"full"}
 ];
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
