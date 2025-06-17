@@ -14,7 +14,7 @@ import { HomeComponent } from './Components/home/home.component';
 
 
 const routes: Routes = [
-  {path:'', component:SiteComponent, pathMatch:"full"},
+  { path: '', redirectTo: 'site', pathMatch: 'full' }, // redireciona a raiz para site
   {path:'site', loadChildren:() => import("./Components/site/site.module").then(m => m.SiteModule)},
   {path:'login', component:LoginComponent, pathMatch:"full"},
   {path:'register', component:RegisterComponent, pathMatch:"full"},
@@ -25,8 +25,7 @@ const routes: Routes = [
   {path: 'blogue', component: BlogueComponent, pathMatch:"full" },
   {path: 'empresas', component: ParaEmpresasComponent, pathMatch:"full" },
   {path:'page', loadChildren:() => import("./Components/page/page.module").then(m => m.PageModule)},
-
-  {path:'**', redirectTo:'site',pathMatch:"full"}
+  { path: '**', redirectTo: 'site' }
 ];
 
 

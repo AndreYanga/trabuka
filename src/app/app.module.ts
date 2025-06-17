@@ -9,7 +9,6 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { EncontrarEstagiosComponent } from './Components/encontrar-estagios/encontrar-estagios.component';
 import { SharedModule } from './shared/shared.module';
-import { PageModule } from './Components/page/page.module';
 import { EncontrarEstagiosModule } from './Components/encontrar-estagios/encontrar-estagios.module';
 import { BeneficiosParticiparComponent } from './Components/beneficios-participar/beneficios-participar.component';
 import { ParaEmpresasComponent } from './Components/para-empresas/para-empresas.component';
@@ -38,7 +37,6 @@ import { HomeComponent } from './Components/home/home.component';
     imports:[
         BrowserModule,
         FormsModule,
-        PageModule,
         AppRoutingModule,
         RouterModule,
         SharedModule,
