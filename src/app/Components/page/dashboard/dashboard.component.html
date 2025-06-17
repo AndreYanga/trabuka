@@ -1,4 +1,5 @@
   <!-- Dashboard Section -->
+<main class="main-content" *ngIf="tipoAcesso === 'estudante'">
     <section class="section" id="dashboard" data-aos="fade-up">
       <div class="container">
         <div class="row g-4">
@@ -205,3 +206,1038 @@
         </div>
       </div>
     </section>
+
+</main>
+
+  <!-- Dashboard de outros tipos de acessos empresa -->
+<main class="main-content" *ngIf="tipoAcesso === 'empresa'">
+  <!-- Dashboard Section -->
+    <section class="section" id="dashboard-empresa" data-aos="fade-up">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="card-title">Vagas Ativas</h4>
+                  <i class="bi bi-check2-square text-[#b4872d]"></i>
+                </div>
+                <p class="card-value text-[#b4872d]">3</p>
+                <a href="#vagas-publicadas" class="card-link">Gerenciar vagas</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="card-title">Novos Candidatos</h4>
+                  <i class="bi bi-person-plus text-[#b4872d]"></i>
+                </div>
+                <p class="card-value text-[#b4872d]">12</p>
+                <a href="#candidatos" class="card-link">Ver candidatos</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="card-title">Entrevistas Agendadas</h4>
+                  <i class="bi bi-calendar-event text-[#b4872d]"></i>
+                </div>
+                <p class="card-value text-[#b4872d]">4</p>
+                <a href="#" class="card-link">Ver agenda</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="card-title">Taxa de Resposta</h4>
+                  <i class="bi bi-chat-left-text text-[#b4872d]"></i>
+                </div>
+                <p class="card-value text-[#b4872d]">92%</p>
+                <div class="progress mt-3">
+                  <div class="progress-bar bg-[#b4872d]" role="progressbar" style="width: 92%;" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="text-muted small mt-2">Mantenha uma boa comunicação</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Perfil da Empresa Section -->
+    <section class="section" id="perfil-empresa" data-aos="fade-up">
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h3 class="section-title">Perfil da Empresa</h3>
+              <button class="btn btn-primary">
+                <i class="bi bi-pencil me-2"></i> Editar Perfil
+              </button>
+            </div>
+            <div class="row">
+              <div class="col-md-4 text-center">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFeXAM721zy97fiQtKB0Z72a_MYgqzW5p16-QrmBJL2KGjvaP4IH6u1hEUIWO0w8dDmKMSrIGUgU-vQw-HvluOtWXauez0pBgNH86ZSA_LrdYg3mi8o2U-JQg0js_E32t0uIgEeR4r1Td59Kuz4MH3mZUKhk0UkJqefIOSbbY9dFvH__dXCBS6ji6gpQDG_4KyRECOLjYXRjWCTFo0lmlz2kgwyW2qeZ-Ehs2GZhEFEyHzHUyVvUttWQrlU9mcjd9iQPMh7yHoSVRk" alt="Logo da Empresa" class="profile-img mb-3">
+                <h4 class="font-weight-bold">[Nome da Empresa]</h4>
+                <p class="text-muted">[emailcorporativoempresa.com]</p>
+                <span class="badge badge-verified">Empresa Verificada</span>
+              </div>
+              <div class="col-md-8">
+                <div class="mb-4">
+                  <h5 class="text-muted">Sobre Nós</h5>
+                  <p>Somos uma empresa líder no setor de tecnologia, focada em soluções inovadoras de software. Estamos sempre em busca de novos talentos para integrar nossa equipe dinâmica e colaborativa.</p>
+                </div>
+                <div class="mb-4">
+                  <h5 class="text-muted">Setor de Atuação</h5>
+                  <p>Tecnologia da Informação e Software</p>
+                </div>
+                <div class="mb-4">
+                  <h5 class="text-muted">Website</h5>
+                  <a href="https://www.empresaexemplo.com" target="_blank" class="card-link"><i class="bi bi-globe me-2"></i> www.empresaexemplo.com</a>
+                </div>
+                <div>
+                  <h5 class="text-muted">Localização</h5>
+                  <p>Luanda, Angola</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vagas Publicadas Section -->
+    <section class="section" id="vagas-publicadas" data-aos="fade-up">
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h3 class="section-title">Vagas Publicadas</h3>
+              <a href="#criar-vaga" class="btn btn-primary"><i class="bi bi-plus me-2"></i> Criar Nova Vaga</a>
+            </div>
+            <div class="row g-4">
+              <div class="col-12">
+                <div class="border border-gray-200 p-4 rounded-lg">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                      <h4 class="card-title text-[#b4872d]">Desenvolvedor Full-Stack Pleno</h4>
+                      <p class="text-muted small">Remoto / Luanda</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="text-muted small">Publicado há 3 dias</span>
+                      <span class="badge bg-success text-white">Ativa</span>
+                    </div>
+                  </div>
+                  <p class="card-text mt-2 mb-3">
+                    Procuramos um desenvolvedor Full-Stack experiente para trabalhar em projetos desafiadores utilizando Node.js e React.
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="bi bi-people text-muted"></i>
+                      <span class="text-muted small">15 candidatos</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <button class="btn btn-secondary btn-sm">Ver Candidatos</button>
+                      <button class="btn btn-outline-primary btn-sm">Editar Vaga</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="border border-gray-200 p-4 rounded-lg">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                      <h4 class="card-title text-[#b4872d]">Estágio em Marketing Digital</h4>
+                      <p class="text-muted small">Luanda - Presencial</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="text-muted small">Publicado há 10 dias</span>
+                      <span class="badge bg-danger text-white">Pausada</span>
+                    </div>
+                  </div>
+                  <p class="card-text mt-2 mb-3">
+                    Oportunidade para estudantes de Marketing aprenderem na prática sobre SEO, mídias sociais e campanhas online.
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-2">
+                      <i class="bi bi-people text-muted"></i>
+                      <span class="text-muted small">8 candidatos</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <button class="btn btn-secondary btn-sm">Ver Candidatos</button>
+                      <button class="btn btn-outline-primary btn-sm">Editar Vaga</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <a href="#" class="card-link">Ver todas as vagas publicadas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gerenciar Candidatos Section -->
+    <section class="section" id="candidatos" data-aos="fade-up">
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="section-title mb-3">Gerenciar Candidatos</h3>
+            <p>Visualize e gerencie os candidatos que se aplicaram às suas vagas. <a href="#" class="card-link">Ver todos os candidatos</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banco de Testes Section -->
+    <section class="section" id="testes-empresa" data-testid="section">
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="section-title mb-3">Banco de Testes da Empresa</h3>
+            <p>Crie e gerencie testes de habilidades para avaliar candidatos. <a href="#" class="card-link">Acessar testes de habilidades</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fórum Section -->
+    <section class="section" id="forum" data-aos="fade-up">
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="section-title mb-3">Fórum da Comunidade</h3>
+            <p>Junte-se à comunidade Trabuka para compartilhar dúvidas, estratégias de contratação e colaborar com outras empresas e estudantes. Poste suas perguntas ou contribua com respostas!</p>
+            <a href="forum.html" class="btn btn-primary mt-3"><i class="bi bi-chat-square-text me-2"></i> Visitar o Fórum</a>
+          </div>
+        </div>
+      </div>
+    </section>
+</main>
+
+<!-- Dashboard de outros tipos de administrador -->
+
+<main class="main-content" *ngIf="tipoAcesso === 'administrador'">
+   <!-- Admin Functionalities Section -->
+    <section class="section" id="admin-functionalities" data-aos="fade-up">
+      <div class="container">
+        <!-- Gestão de Testes de Habilidade -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h3 class="section-title">Gestão de Testes de Habilidade</h3>
+              <button class="btn btn-primary"><i class="bi bi-plus-circle me-2"></i> Criar Novo Teste</button>
+            </div>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="border border-gray-200 p-4 rounded-lg">
+                  <h4 class="card-title text-[#b4872d]">Teste de Lógica de Programação</h4>
+                  <p class="text-muted small">Perguntas: 10 | Tempo: 30 min | Dificuldade: Média</p>
+                  <p class="card-text mt-2 mb-3">Avalia a capacidade de resolução de problemas e raciocínio lógico em programação.</p>
+                  <div class="d-flex gap-2">
+                    <button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil me-1"></i> Editar</button>
+                    <button class="btn btn-outline-primary btn-sm"><i class="bi bi-bar-chart me-1"></i> Ver Resultados</button>
+                    <button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash me-1"></i> Excluir</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="border border-gray-200 p-4 rounded-lg">
+                  <h4 class="card-title text-[#b4872d]">Teste de Inglês Técnico</h4>
+                  <p class="text-muted small">Perguntas: 15 | Tempo: 20 min | Dificuldade: Fácil</p>
+                  <p class="card-text mt-2 mb-3">Avalia a proficiência em inglês para contextos técnicos e de tecnologia da informação.</p>
+                  <div class="d-flex gap-2">
+                    <button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil me-1"></i> Editar</button>
+                    <button class="btn btn-outline-primary btn-sm"><i class="bi bi-bar-chart me-1"></i> Ver Resultados</button>
+                    <button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash me-1"></i> Excluir</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="border border-gray-200 p-4 rounded-lg">
+                  <h4 class="card-title text-[#b4872d]">Teste de Design UI/UX</h4>
+                  <p class="text-muted small">Perguntas: 12 | Tempo: 25 min | Dificuldade: Difícil</p>
+                  <p class="card-text mt-2 mb-3">Avalia conhecimentos sobre princípios de design, ferramentas e usabilidade.</p>
+                  <div class="d-flex gap-2">
+                    <button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil me-1"></i> Editar</button>
+                    <button class="btn btn-outline-primary btn-sm"><i class="bi bi-bar-chart me-1"></i> Ver Resultados</button>
+                    <button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash me-1"></i> Excluir</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Validação de Projetos de Empresas -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h3 class="section-title">Validação de Projetos de Empresas</h3>
+              <div class="d-flex align-items-center gap-2">
+                <span class="text-muted small">Filtrar por status:</span>
+                <select class="form-select form-select-sm">
+                  <option>Todos</option>
+                  <option selected>Pendentes de Aprovação</option>
+                  <option>Aprovados</option>
+                  <option>Rejeitados</option>
+                </select>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Título do Projeto</th>
+                    <th>Empresa</th>
+                    <th>Área</th>
+                    <th>Data de Submissão</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Desenvolvimento de App Mobile Inovador</td>
+                    <td>InovaTech Solutions</td>
+                    <td>Desenvolvimento Mobile</td>
+                    <td>01/08/2024</td>
+                    <td><span class="badge bg-warning text-dark">Pendente Aprovação</span></td>
+                    <td class="d-flex gap-1">
+                      <button class="btn btn-outline-primary btn-sm" title="Ver Detalhes"><i class="bi bi-eye"></i></button>
+                      <button class="btn btn-success btn-sm" title="Aprovar"><i class="bi bi-check-circle"></i></button>
+                      <button class="btn btn-danger btn-sm" title="Rejeitar"><i class="bi bi-x-circle"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Plataforma E-commerce B2B Avançada</td>
+                    <td>Comércio Global Lda</td>
+                    <td>Desenvolvimento Web</td>
+                    <td>28/07/2024</td>
+                    <td><span class="badge bg-warning text-dark">Pendente Aprovação</span></td>
+                    <td class="d-flex gap-1">
+                      <button class="btn btn-outline-primary btn-sm" title="Ver Detalhes"><i class="bi bi-eye"></i></button>
+                      <button class="btn btn-success btn-sm" title="Aprovar"><i class="bi bi-check-circle"></i></button>
+                      <button class="btn btn-danger btn-sm" title="Rejeitar"><i class="bi bi-x-circle"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Sistema de Gestão de Marketing Digital</td>
+                    <td>Marketing Pro Angola</td>
+                    <td>Marketing Digital</td>
+                    <td>15/07/2024</td>
+                    <td><span class="badge bg-success text-white">Aprovado</span></td>
+                    <td class="d-flex gap-1">
+                      <button class="btn btn-outline-primary btn-sm" title="Ver Detalhes"><i class="bi bi-eye"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gestão de Pagamentos e Comissões -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h3 class="section-title mb-3">Gestão de Pagamentos e Comissões</h3>
+            <p class="card-text mb-4">Valide transações e acompanhe as comissões (fixo de 20% por projeto concluído).</p>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>ID Transação</th>
+                    <th>Tipo</th>
+                    <th>Referência</th>
+                    <th>Valor</th>
+                    <th>Comissão Trabuka (20%)</th>
+                    <th>Status</th>
+                    <th>Data</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>TRN00123</td>
+                    <td>Assinatura Empresa</td>
+                    <td>InovaTech Solutions</td>
+                    <td class="font-weight-bold">AOA 25.000</td>
+                    <td>N/A</td>
+                    <td><span class="badge bg-success text-white">Confirmado</span></td>
+                    <td>02/08/2024</td>
+                    <td>
+                      <button class="btn btn-outline-primary btn-sm" title="Ver Recibo"><i class="bi bi-receipt"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>TRN00124</td>
+                    <td>Pagamento Projeto</td>
+                    <td>Projeto X - App Mobile</td>
+                    <td class="font-weight-bold">AOA 150.000</td>
+                    <td class="font-weight-bold text-[#b4872d]">AOA 30.000</td>
+                    <td><span class="badge bg-warning text-dark">Pendente Validação</span></td>
+                    <td>03/08/2024</td>
+                    <td class="d-flex gap-1">
+                      <button class="btn btn-outline-primary btn-sm" title="Ver Recibo"><i class="bi bi-receipt"></i></button>
+                      <button class="btn btn-primary btn-sm" title="Validar Pagamento"><i class="bi bi-check2-circle"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>TRN00125</td>
+                    <td>Pagamento Projeto</td>
+                    <td>Projeto Y - E-commerce</td>
+                    <td class="font-weight-bold">AOA 200.000</td>
+                    <td class="font-weight-bold text-[#b4872d]">AOA 40.000</td>
+                    <td><span class="badge bg-success text-white">Confirmado</span></td>
+                    <td>25/07/2024</td>
+                    <td>
+                      <button class="btn btn-outline-primary btn-sm" title="Ver Recibo"><i class="bi bi-receipt"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mediação e Resolução de Disputas -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h3 class="section-title mb-3">Mediação e Resolução de Disputas</h3>
+            <p class="card-text mb-4">Gerencie e resolva conflitos entre jovens e empresas.</p>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>ID Disputa</th>
+                    <th>Partes Envolvidas</th>
+                    <th>Motivo</th>
+                    <th>Data Abertura</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>DSP001</td>
+                    <td>Jovem A vs Empresa X</td>
+                    <td>Não pagamento</td>
+                    <td>05/08/2024</td>
+                    <td><span class="badge bg-danger text-white">Aberta - Urgente</span></td>
+                    <td class="d-flex gap-1">
+                      <button class="btn btn-outline-primary btn-sm" title="Ver Detalhes"><i class="bi bi-eye"></i></button>
+                      <button class="btn btn-primary btn-sm" title="Intervir/Mediar"><i class="bi bi-hammer"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>DSP002</td>
+                    <td>Empresa Y vs Jovem B</td>
+                    <td>Entrega incompleta</td>
+                    <td>02/08/2024</td>
+                    <td><span class="badge bg-warning text-dark">Em Análise</span></td>
+                    <td class="d-flex gap-1">
+                      <button class="btn btn-outline-primary btn-sm" title="Ver Detalhes"><i class="bi bi-eye"></i></button>
+                      <button class="btn btn-primary btn-sm" title="Intervir/Mediar"><i class="bi bi-hammer"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fórum Section -->
+    <section class="section" id="forum" data-aos="fade-up">
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="section-title mb-3">Fórum da Comunidade</h3>
+            <p>Junte-se à comunidade Trabuka para discutir melhorias na plataforma, compartilhar feedback e colaborar com empresas e estudantes. Poste suas dúvidas ou contribua com respostas!</p>
+            <a href="forum.html" class="btn btn-primary mt-3"><i class="bi bi-chat-square-text me-2"></i> Visitar o Fórum</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+</main>
+
+
+<!-- Dashboard de outros tipos de acessos gestor -->
+
+<main class="main-content" *ngIf="tipoAcesso === 'gestor'">
+
+     <!-- Dashboard Section -->
+    <section class="section" id="dashboard-admin" data-aos="fade-up">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="card-title">Usuários Pendentes</h4>
+                  <i class="bi bi-hourglass-split text-[#b4872d]"></i>
+                </div>
+                <p class="card-value text-[#b4872d]">15</p>
+                <a href="#user-management" class="card-link">Aprovar/Rejeitar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="card-title">Projetos para Aprovar</h4>
+                  <i class="bi bi-check2-square text-[#b4872d]"></i>
+                </div>
+                <p class="card-value text-[#b4872d]">8</p>
+                <a href="#project-management" class="card-link">Ver projetos</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="card-title">Transações Pendentes</h4>
+                  <i class="bi bi-hourglass-bottom text-[#b4872d]"></i>
+                </div>
+                <p class="card-value text-[#b4872d]">2</p>
+                <a href="#payment-management" class="card-link">Validar transações</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 class="card-title">Receita (Mês)</h4>
+                  <i class="bi bi-graph-up text-[#b4872d]"></i>
+                </div>
+                <p class="card-value text-[#b4872d]">AOA 1.250.000</p>
+                <a href="#internal-reports" class="card-link">Ver relatório financeiro</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gestão de Usuários Section -->
+    <section class="section" id="user-management" data-aos="fade-up">
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h3 class="section-title">Gestão de Usuários</h3>
+              <div class="d-flex gap-2">
+                <input type="search" class="form-control form-control-sm" placeholder="Buscar usuário...">
+                <button class="btn btn-primary"><i class="bi bi-person-plus me-2"></i> Novo Usuário</button>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Nome</th>
+                    <th>Tipo</th>
+                    <th>Status</th>
+                    <th>Data de Registro</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Jovem Estudante X</td>
+                    <td>Jovem</td>
+                    <td><span class="badge bg-warning text-dark">Pendente Aprovação</span></td>
+                    <td>01/08/2024</td>
+                    <td class="d-flex gap-1">
+                      <button class="btn btn-outline-primary btn-sm"><i class="bi bi-eye"></i></button>
+                      <button class="btn btn-success btn-sm"><i class="bi bi-check-circle"></i></button>
+                      <button class="btn btn-danger btn-sm"><i class="bi bi-x-circle"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Empresa Y Tech</td>
+                    <td>Empresa</td>
+                    <td><span class="badge bg-success text-white">Ativo</span></td>
+                    <td>15/07/2024</td>
+                    <td class="d-flex gap-1">
+                      <button class="btn btn-outline-primary btn-sm"><i class="bi bi-eye"></i></button>
+                      <button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil"></i></button>
+                      <button class="btn btn-outline-danger btn-sm"><i class="bi bi-slash-circle"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Empresa Z Soluções</td>
+                    <td>Empresa</td>
+                    <td><span class="badge bg-danger text-white">Inativo</span></td>
+                    <td>10/06/2024</td>
+                    <td class="d-flex gap-1">
+                      <button class="btn btn-outline-primary btn-sm"><i class="bi bi-eye"></i></button>
+                      <button class="btn btn-outline-primary btn-sm"><i class="bi bi-bell"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gestão de Testes Section -->
+    <section class="section" id="test-management" data-aos="fade-up">
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h3 class="section-title">Gestão de Testes de Habilidade</h3>
+              <button class="btn btn-primary"><i class="bi bi-plus-circle me-2"></i> Criar Novo Teste</button>
+            </div>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="border border-gray-200 p-4 rounded-lg">
+                  <h4 class="card-title text-[#b4872d]">Teste de Lógica de Programação</h4>
+                  <p class="text-muted small">Perguntas: 10 | Tempo: 30 min</p>
+                  <p class="card-text mt-2 mb-3">Avalia a capacidade de resolução de problemas e raciocínio lógico.</p>
+                  <div class="d-flex gap-2">
+                    <button class="btn btn-outline-primary btn-sm">Editar</button>
+                    <button class="btn btn-outline-primary btn-sm">Ver Resultados</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="border border-gray-200 p-4 rounded-lg">
+                  <h4 class="card-title text-[#b4872d]">Teste de Inglês Técnico</h4>
+                  <p class="text-muted small">Perguntas: 15 | Tempo: 20 min</p>
+                  <p class="card-text mt-2 mb-3">Avalia a proficiência em inglês para contextos técnicos e de TI.</p>
+                  <div class="d-flex gap-2">
+                    <button class="btn btn-outline-primary btn-sm">Editar</button>
+                    <button class="btn btn-outline-primary btn-sm">Ver Resultados</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gestão de Projetos Section -->
+    <section class="section" id="project-management" data-aos="fade-up">
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h3 class="section-title">Gestão de Projetos</h3>
+              <div class="d-flex align-items-center gap-2">
+                <span class="text-muted small">Filtro:</span>
+                <select class="form-select form-select-sm">
+                  <option>Todos</option>
+                  <option>Pendentes de Aprovação</option>
+                  <option>Em Andamento</option>
+                  <option>Concluídos</option>
+                </select>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Título do Projeto</th>
+                    <th>Empresa</th>
+                    <th>Mentor Designado</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Desenvolvimento de App Mobile</td>
+                    <td>InovaTech Solutions</td>
+                    <td><span class="badge bg-warning text-dark">Nenhum</span></td>
+                    <td><span class="badge bg-info text-white">Pendente Aprovação</span></td>
+                    <td class="d-flex gap-1">
+                      <button class="btn btn-outline-primary btn-sm"><i class="bi bi-eye"></i></button>
+                      <button class="btn btn-primary btn-sm"><i class="bi bi-check-circle"></i></button>
+                      <button class="btn btn-outline-primary btn-sm"><i class="bi bi-person-check"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Plataforma E-commerce B2B</td>
+                    <td>Comércio Global Lda</td>
+                    <td>Ana Silva</td>
+                    <td><span class="badge bg-success text-white">Em Andamento</span></td>
+                    <td class="d-flex gap-1">
+                      <button class="btn btn-outline-primary btn-sm"><i class="bi bi-eye"></i></button>
+                      <button class="btn btn-outline-primary btn-sm"><i class="bi bi-display"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Análise de Dados de Mercado</td>
+                    <td>Market Insights</td>
+                    <td>Carlos Santos</td>
+                    <td><span class="badge bg-success text-white">Concluído</span></td>
+                    <td class="d-flex gap-1">
+                      <button class="btn btn-outline-primary btn-sm"><i class="bi bi-eye"></i></button>
+                      <button class="btn btn-outline-primary btn-sm"><i class="bi bi-check2-all"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gestão de Pagamentos Section -->
+    <section class="section" id="payment-management" data-aos="fade-up">
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="section-title mb-3">Gestão de Pagamentos e Comissões</h3>
+            <p class="card-text mb-4">Valide transações e acompanhe as comissões (20% por projeto).</p>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>ID Transação</th>
+                    <th>Tipo</th>
+                    <th>Valor</th>
+                    <th>Status</th>
+                    <th>Data</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>TRN00123</td>
+                    <td>Assinatura Empresa</td>
+                    <td>AOA 25.000</td>
+                    <td><span class="badge bg-success text-white">Confirmado</span></td>
+                    <td>02/08/2024</td>
+                    <td>
+                      <button class="btn btn-outline-primary btn-sm"><i class="bi bi-receipt"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>TRN00124</td>
+                    <td>Comissão Projeto X</td>
+                    <td>AOA 5.000</td>
+                    <td><span class="badge bg-warning text-dark">Pendente</span></td>
+                    <td>03/08/2024</td>
+                    <td class="d-flex gap-1">
+                      <button class="btn btn-outline-primary btn-sm"><i class="bi bi-receipt"></i></button>
+                      <button class="btn btn-primary btn-sm"><i class="bi bi-check2-circle"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Relatórios Internos Section -->
+    <section class="section" id="internal-reports" data-aos="fade-up">
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h3 class="section-title">Relatórios Internos</h3>
+              <button class="btn btn-primary"><i class="bi bi-download me-2"></i> Exportar para Investidores</button>
+            </div>
+            <p class="card-text mb-4">Analise as métricas da plataforma para tomada de decisões estratégicas.</p>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="bg-light p-4 rounded-lg">
+                  <h4 class="card-title">Visão Geral de Usuários</h4>
+                  <p class="text-muted small">Total: 530 (350 Jovens, 180 Empresas)</p>
+                  <p class="text-muted small">Ativos no último mês: 450</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="bg-light p-4 rounded-lg">
+                  <h4 class="card-title">Desempenho de Projetos</h4>
+                  <p class="text-muted small">Projetos Concluídos: 75</p>
+                  <p class="text-muted small">Taxa de Sucesso: 88%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fórum Section -->
+    <section class="section" id="forum" data-aos="fade-up">
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="section-title mb-3">Fórum da Comunidade</h3>
+            <p>Junte-se à comunidade Trabuka para discutir estratégias de gerenciamento, compartilhar feedback e colaborar com empresas e estudantes. Poste suas dúvidas ou contribua com respostas!</p>
+            <a href="forum.html" class="btn btn-primary mt-3"><i class="bi bi-chat-square-text me-2"></i> Visitar o Fórum</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+</main>
+
+<!-- Dashboard de outros tipos de acessos agente_suporte-->
+
+<main class="main-content" *ngIf="tipoAcesso === 'agente_suporte'">
+
+  <!-- Support Dashboard Section -->
+    <section class="section" id="support-dashboard" data-aos="fade-up">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <i class="bi bi-exclamation-circle text-danger fs-4"></i>
+                  <h4 class="card-title">Tickets Abertos</h4>
+                </div>
+                <p class="card-value text-danger">12</p>
+                <p class="text-muted small">+2 nas últimas 24h</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <i class="bi bi-hourglass-split text-warning fs-4"></i>
+                  <h4 class="card-title">Tickets em Progresso</h4>
+                </div>
+                <p class="card-value text-warning">8</p>
+                <p class="text-muted small">3 atribuídos hoje</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <i class="bi bi-check-circle text-success fs-4"></i>
+                  <h4 class="card-title">Tickets Resolvidos</h4>
+                </div>
+                <p class="card-value text-success">127</p>
+                <p class="text-muted small">Média de 5 por dia</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <i class="bi bi-headset text-[#b4872d] fs-4"></i>
+                  <h4 class="card-title">Tempo Médio de Resposta</h4>
+                </div>
+                <p class="card-value text-[#b4872d]">2h 15m</p>
+                <p class="text-muted small">Dentro da meta</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Tickets -->
+        <div class="card mt-4">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h3 class="section-title">Tickets Recentes</h3>
+              <div class="d-flex align-items-center gap-2">
+                <span class="text-muted small">Filtrar por status:</span>
+                <select class="form-select form-select-sm">
+                  <option>Todos</option>
+                  <option>Aberto</option>
+                  <option>Em Progresso</option>
+                  <option>Resolvido</option>
+                  <option>Fechado</option>
+                </select>
+                <button class="btn btn-primary"><i class="bi bi-plus-circle me-2"></i> Novo Ticket</button>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>ID Ticket</th>
+                    <th>Assunto</th>
+                    <th>Usuário</th>
+                    <th>Prioridade</th>
+                    <th>Data de Criação</th>
+                    <th>Status</th>
+                    <th>Atribuído a</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="font-weight-bold">SUP-00345</td>
+                    <td>Problema ao submeter projeto</td>
+                    <td>Empresa ABC Lda.</td>
+                    <td><span class="badge bg-danger text-white">Alta</span></td>
+                    <td>10/08/2024 09:15</td>
+                    <td><span class="badge bg-danger text-white">Aberto</span></td>
+                    <td>Maria Silva</td>
+                    <td class="d-flex gap-1">
+                      <button class="btn btn-outline-primary btn-sm" title="Ver Detalhes"><i class="bi bi-eye"></i></button>
+                      <button class="btn btn-outline-warning btn-sm" title="Atribuir"><i class="bi bi-person-check"></i></button>
+                      <button class="btn btn-outline-success btn-sm" title="Resolver"><i class="bi bi-check-circle"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="font-weight-bold">SUP-00344</td>
+                    <td>Dúvida sobre pagamento de comissão</td>
+                    <td>João Estudante</td>
+                    <td><span class="badge bg-warning text-dark">Média</span></td>
+                    <td>09/08/2024 17:30</td>
+                    <td><span class="badge bg-warning text-dark">Em Progresso</span></td>
+                    <td>Carlos Santos</td>
+                    <td class="d-flex gap-1">
+                      <button class="btn btn-outline-primary btn-sm" title="Ver Detalhes"><i class="bi bi-eye"></i></button>
+                      <button class="btn btn-outline-warning btn-sm" title="Atribuir"><i class="bi bi-person-check"></i></button>
+                      <button class="btn btn-outline-success btn-sm" title="Resolver"><i class="bi bi-check-circle"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="font-weight-bold">SUP-00342</td>
+                    <td>Erro ao carregar perfil</td>
+                    <td>Ana JovemDev</td>
+                    <td><span class="badge bg-info text-white">Baixa</span></td>
+                    <td>09/08/2024 11:05</td>
+                    <td><span class="badge bg-success text-white">Resolvido</span></td>
+                    <td>Maria Silva</td>
+                    <td>
+                      <button class="btn btn-outline-primary btn-sm" title="Ver Detalhes"><i class="bi bi-eye"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="font-weight-bold">SUP-00341</td>
+                    <td>Não consigo acessar os testes de habilidade</td>
+                    <td>Pedro Aluno</td>
+                    <td><span class="badge bg-danger text-white">Alta</span></td>
+                    <td>08/08/2024 14:22</td>
+                    <td><span class="badge bg-danger text-white">Aberto</span></td>
+                    <td>N/A</td>
+                    <td class="d-flex gap-1">
+                      <button class="btn btn-outline-primary btn-sm" title="Ver Detalhes"><i class="bi bi-eye"></i></button>
+                      <button class="btn btn-outline-warning btn-sm" title="Atribuir"><i class="bi bi-person-check"></i></button>
+                      <button class="btn btn-outline-success btn-sm" title="Resolver"><i class="bi bi-check-circle"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Knowledge Base and Agent Performance -->
+        <div class="row g-4 mt-4">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="section-title mb-3">Base de Conhecimento</h3>
+                <p class="card-text mb-4">Acesse rapidamente artigos e FAQs para auxiliar no suporte.</p>
+                <div class="d-flex flex-column gap-3">
+                  <a href="#" class="p-3 bg-light rounded-lg hover:bg-[#f8f9fa] transition-colors">
+                    <h4 class="card-title text-[#b4872d] fs-6">Como redefinir senha?</h4>
+                    <p class="text-muted small">Guia passo-a-passo para recuperação de senha.</p>
+                  </a>
+                  <a href="#" class="p-3 bg-light rounded-lg hover:bg-[#f8f9fa] transition-colors">
+                    <h4 class="card-title text-[#b4872d] fs-6">Problemas com upload de documentos</h4>
+                    <p class="text-muted small">Soluções para erros comuns de upload.</p>
+                  </a>
+                  <a href="#" class="p-3 bg-light rounded-lg hover:bg-[#f8f9fa] transition-colors">
+                    <h4 class="card-title text-[#b4872d] fs-6">Guia de uso da plataforma para empresas</h4>
+                    <p class="text-muted small">Visão geral das funcionalidades para recrutadores.</p>
+                  </a>
+                </div>
+                <a href="#" class="btn btn-primary mt-4 w-100"><i class="bi bi-book me-2"></i> Ver Todos os Artigos</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="section-title mb-3">Desempenho dos Agentes</h3>
+                <p class="card-text mb-4">Visão geral da performance da equipe de suporte.</p>
+                <div class="d-flex flex-column gap-4">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="https://lh3.googleusercontent.com/a/ACg8ocJ0H8Y2_R10Z8P1Zz1v1Y6XZYvXQ5W7Z1vY5J6XG3Q=s96-c" alt="Avatar Maria Silva" class="rounded-circle" width="40" height="40">
+                      <div>
+                        <p class="font-weight-medium text-dark">Maria Silva</p>
+                        <p class="text-muted small">Online</p>
+                      </div>
+                    </div>
+                    <div class="text-end">
+                      <p class="font-weight-medium text-success">5 Resolvidos Hoje</p>
+                      <p class="text-muted small">2 Tickets Ativos</p>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBw3u1xpHc_trqjnsWvPmVEubkxZQzv9PmHIm6yjUf4OVtaKxE4_Sxzm_XlY1FWR19LCMILpW89uKM-0jd1yz-m5FItuKSpVXLBz2Jn0E-fUl6r-0qDkn7sdyOqRp4fZIxr5xSgB6Q2IHu5f6Geey8XLuvS0nA3rxAKuewl3Ysr1aM35Gc6nVJtxxzN1hJIQIOXYKKFUHF4y5iSfTfjieDljqUcF34qPSlNYu4I3GjSQpMm_N2ORfIoP8_A2hYjtBwKzB6tSCY2_gx" alt="Avatar Carlos Santos" class="rounded-circle" width="40" height="40">
+                      <div>
+                        <p class="font-weight-medium text-dark">Carlos Santos</p>
+                        <p class="text-muted small">Offline</p>
+                      </div>
+                    </div>
+                    <div class="text-end">
+                      <p class="font-weight-medium text-dark">3 Resolvidos Hoje</p>
+                      <p class="text-muted small">1 Ticket Ativo</p>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw16W_y0z9U6RfgF5sCB0PN-U-_zgyXQi0iiKvpcQvhw4OJyUlCTm8naypYyILqCbxv1NwA7I0MlybmpjmXPOGFt8Z1S2HQzjO4FwLZ2Vnti3a6QIW9g6VYGyyncGUvK3EADkxyFk4swvuGBTOT95_WQtpVnYn13QcYSDQ0C1nI9P8idTNx7zRZ-KZRqQyd9f9e4T03TFR3jVYaJOr3jgWrju14CAyZgjD57ZfWea6jwQzjVxUm5p0UOcjFiNaeznhDKlK7UIIeBdi" alt="Avatar Joana Pereira" class="rounded-circle" width="40" height="40">
+                      <div>
+                        <p class="font-weight-medium text-dark">Joana Pereira</p>
+                        <p class="text-muted small">Online</p>
+                      </div>
+                    </div>
+                    <div class="text-end">
+                      <p class="font-weight-medium text-warning">1 Resolvido Hoje</p>
+                      <p class="text-muted small">4 Tickets Ativos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fórum Section -->
+    <section class="section" id="forum" data-aos="fade-up">
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="section-title mb-3">Fórum da Comunidade</h3>
+            <p>Junte-se à comunidade Trabuka para discutir soluções técnicas, compartilhar conhecimento e colaborar com outros agentes de suporte, empresas e estudantes. Poste suas dúvidas ou contribua com respostas!</p>
+            <a href="forum.html" class="btn btn-primary mt-3"><i class="bi bi-chat-square-text me-2"></i> Visitar o Fórum</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+</main>
+
+
