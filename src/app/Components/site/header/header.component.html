@@ -3,7 +3,7 @@
   <div class="container d-flex align-items-center justify-content-between">
     <!-- Logo -->
     <div class="logo">
-      <img src="/assets/img/logo-trabuka.png" alt="Logo Trabuka" (click)="goToHome()">
+      <img src="/assets/img/logo-trabuka.png" loading="lazy" alt="Logo Trabuka" (click)="goToHome()">
     </div>
 
     <!-- Navigation Menu -->
@@ -14,7 +14,7 @@
           <a (click)="goToEmpresas()"><span>Para Empresas</span></a>
         </li>
         <li class="dropdown">
-          <a (click)="toggleDropdown('estudantes ', $event)"><span>Estudantes ou Profissionais </span> <i class="bi bi-chevron-down"></i></a>
+          <a (click)="toggleDropdown('estudantes', $event)"><span>Estudantes ou Profissionais </span> <i class="bi bi-chevron-down"></i></a>
           <ul [ngClass]="{'dropdown-active': activeDropdown === 'estudantes'}">
             <li><a (click)="goToBeneficios()">Benefícios de Participar</a></li>
             <li><a  (click)=" goToEncontrarEstagio()">Encontrar Estágios</a></li>
@@ -23,8 +23,7 @@
         </li>
 
          <li class="dropdown">
-          <a ><span>Sobre </span> <i class="bi bi-chevron-down"></i></a>
-
+          <a (click)="toggleDropdown('sobre', $event)"><span>Sobre </span> <i class="bi bi-chevron-down"></i></a>
           <ul [ngClass]="{'dropdown-active': activeDropdown === 'sobre'}">
             <li><a (click)="goToSobreTrabuka()">Sobre a Trabuka</a></li>
             <li><a (click)="goToBlogue()">Blogue</a></li>
